@@ -1,6 +1,8 @@
 :root{
     --nav-statement-padding: 1rem;
     --nav-statement-margin: 00.5rem;
+    --nav-statement-border-size: 0.5rem;
+    --nav-statement-border-round: 0.5rem;
 }
 
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
@@ -46,19 +48,25 @@ header h1{
 /* Navigation and Statement CSS */
 #nav-statement{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
     margin: 0 auto;
 
     text-align: center;
 
-    
+
 }
 #statement-container{
     padding: var(--nav-statement-padding);
     margin: var(--nav-statement-margin);
-    
+    border-width: var(--nav-statement-border-size);
+
+    border-style: solid;
+    border-color: black;
+
     width: 100%;
-    max-width: 50%;
+    max-width: 40%;
 
     background-color: gray;
 }
@@ -69,13 +77,40 @@ header h1{
 #nav-statement nav{
     padding: var(--nav-statement-padding);
     margin: var(--nav-statement-margin);
+    border-width: var(--nav-statement-border-size);
+
+    border-style: solid;
+    border-color: black;
 
     width: 100%;
-    max-width: 50%;
+    max-width: 40%;
 
     background-color: gray;
 }
 
+/* Nav Links CSS */
+nav a{
+    color:black;
+
+    text-decoration: none;
+    padding: 0.5rem;
+
+    width: 100%;
+    background-color: whitesmoke;
+
+}
+nav a:hover{
+    color:red;
+}
+nav li{
+    margin: 1rem auto;
+    max-width: 50%;
+
+}
+nav ul {
+    list-style: none;
+    padding-left: 0px;    
+}
 
 
 
