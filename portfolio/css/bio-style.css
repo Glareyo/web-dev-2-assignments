@@ -1,6 +1,6 @@
 :root{
     --nav-statement-padding: 1rem;
-    --nav-statement-margin: 0.5rem;
+    --nav-statement-margin: 00.5rem;
     --nav-statement-border-size: 0.5rem;
     --nav-statement-border-round: 0.5rem;
 }
@@ -24,7 +24,7 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
+	background-color: black;
 }
 
 
@@ -37,63 +37,15 @@ header h1{
     padding: 1rem;
 
     text-decoration: underline;
-    /* background-color: lightgray; */
+    background-color: lightgray;
     border-style: solid;
     border-color: black;
     border-width: 0.25rem;
 }
 
-header{
-    background-image: url(../img/radio-image.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+nav{
+    margin: 2rem;
 }
-
-
-/* Navigation and Statement CSS */
-#nav-statement{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-    margin: 0 auto;
-
-    text-align: center;
-
-
-}
-#statement-container{
-    padding: var(--nav-statement-padding);
-    margin: var(--nav-statement-margin);
-    border-width: var(--nav-statement-border-size);
-
-    border-style: solid;
-    border-color: black;
-
-    width: 100%;
-    max-width: 40%;
-
-    background-color: gray;
-}
-#statement-container p{
-    margin: 0 auto;
-    max-width: 50%;
-}
-#nav-statement nav{
-    padding: var(--nav-statement-padding);
-    margin: var(--nav-statement-margin);
-    border-width: var(--nav-statement-border-size);
-
-    border-style: solid;
-    border-color: black;
-
-    width: 100%;
-    max-width: 40%;
-
-    background-color: gray;
-}
-
-/* Nav Links CSS */
 nav a{
     color:black;
 
@@ -112,20 +64,51 @@ nav a:hover{
     border-color: lightgray;
     background-color: darkslategray;
 }
-nav li{
 
-    margin: 1rem auto;
-    
+
+/* CSS for Bio Image */
+figure{
+    margin:0px;
+    color: slateblue;
 }
-nav ul {
-    list-style: none;
-    padding-left: 0px;    
+figure img{
+
+    background-color: black;
     
+    border-style: solid;
+    border-radius: 5rem;
+    border-color: lightgray;
+    border-width: 1rem;
+}
+
+/* CSS for Information */
+.info-sec{
+    color: white;
+    margin: 2rem auto;
+}
+.info-sec h2{
+    font-family: "Brush Script MT";
+    font-size: 2rem;
+
+    text-decoration-color: white;
+    text-decoration-style: double;
+    text-decoration-line: underline;
+
+    width: 100%;
+
+    color: white;
+}
+.info-sec p{
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
 
 
+footer{
+    color: whitesmoke;
+    margin: 10rem 0px 0px 0px;
+}
 
 /* Class for making YouTube/Vimeo videos responsive */
 
