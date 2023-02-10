@@ -70,7 +70,7 @@ header h1{
     border-color: darkgray;
 
     width: 100%;
-    max-width: 40%;
+    max-width: 100%;
 
     background-color: gray;
 }
@@ -96,7 +96,7 @@ header h1{
     border-color: darkgray;
 
     width: 100%;
-    max-width: 40%;
+    max-width: 100%;
 
     background-color: gray;
 }
@@ -123,8 +123,8 @@ nav a:hover{
 }
 nav li{
 
-    margin: 1rem auto;
-    
+    margin: 3rem auto;
+    max-width: 100%;
 }
 nav ul {
     list-style: none;
@@ -178,8 +178,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for iPads and tablets.  */
 @media all and (min-width: 481px) {
-	
-	
+	#statement-container{max-width: 40%;}
+	#nav-statement nav{max-width: 40%;}
 	
 } /* closes 481px+ */
 
