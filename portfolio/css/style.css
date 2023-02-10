@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
 :root{
     --nav-statement-padding: 1rem;
     --nav-statement-margin: 0.5rem;
@@ -24,7 +26,7 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
+    background-color: black;
 }
 
 
@@ -33,21 +35,19 @@ body {
     text-align: center;
 }
 
+
+header{
+    color: white;
+    text-decoration-color: white;
+    text-decoration-style: double;
+    text-decoration-line: underline;
+}
 header h1{
     padding: 1rem;
 
-    text-decoration: underline;
-    /* background-color: lightgray; */
-    border-style: solid;
-    border-color: black;
     border-width: 0.25rem;
 }
 
-header{
-    background-image: url(../img/radio-image.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
 
 
 /* Navigation and Statement CSS */
@@ -60,7 +60,6 @@ header{
 
     text-align: center;
 
-
 }
 #statement-container{
     padding: var(--nav-statement-padding);
@@ -68,12 +67,16 @@ header{
     border-width: var(--nav-statement-border-size);
 
     border-style: solid;
-    border-color: black;
+    border-color: darkgray;
 
     width: 100%;
     max-width: 40%;
 
     background-color: gray;
+}
+#statement-container h3{
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
 }
 #statement-container p{
     margin: 0 auto;
@@ -85,7 +88,7 @@ header{
     border-width: var(--nav-statement-border-size);
 
     border-style: solid;
-    border-color: black;
+    border-color: darkgray;
 
     width: 100%;
     max-width: 40%;
@@ -95,6 +98,7 @@ header{
 
 /* Nav Links CSS */
 nav a{
+    font-family: 'Roboto Mono','Times New Roman', Times, serif;    
     color:black;
 
     text-decoration: none;
