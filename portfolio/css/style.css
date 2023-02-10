@@ -75,12 +75,17 @@ header h1{
     background-color: gray;
 }
 #statement-container h3{
+    font-size: 3rem;
+
     text-decoration: underline;
     text-decoration-thickness: 0.5rem;
 }
 #statement-container p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 75%;
 }
 #nav-statement nav{
     padding: var(--nav-statement-padding);
@@ -127,7 +132,10 @@ nav ul {
     
 }
 
-
+footer{
+    margin: 5rem 0 0 0;
+    color: wheat;
+}
 
 
 
