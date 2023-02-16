@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+:root{
+    --lobster-font: 'Roboto Mono', monospace;
+
+    --img-corners: url(../img/menu-corners.png);
+}
+
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
 	margin:0px;
@@ -31,37 +39,46 @@ body {
 #menu-section{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;    
-}
-.menu-border{
-    background-color: yellow;
+    justify-content: space-evenly;   
+    gap: 1rem; 
 }
 .menu{
+    background-image: var(--img-corners);
+    background-size: 100% 100%;
+    text-decoration: none;
+    border: 0.5rem solid gold;
+
     background-color: darkred;
     padding: 10rem 2rem;
-    margin: 5rem;
-
-    
+    margin: 2rem;
 
     width: 100%;
-    max-width: 20rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    justify-content: space-around;
-
+    max-width: 20rem;   
+}
+.menu:hover{
+    border: 0.5rem solid gray;
 }
 .menu figure{
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-around;
+    align-content: baseline;
 }
 .menu img{
-    width: 100%;
+    border: 1rem solid black;
+
     border-radius: 100%;
 }
-.menu a{
+.menu p{
+    font-family: var(--lobster-font);
+    font-size: 2rem;
+    color: black;
+
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: gray;
 }
 
