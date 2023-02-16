@@ -33,10 +33,15 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;    
 }
+.menu-border{
+    background-color: yellow;
+}
 .menu{
-    background-color: red;
+    background-color: darkred;
     padding: 10rem 2rem;
     margin: 5rem;
+
+    
 
     width: 100%;
     max-width: 20rem;
@@ -45,6 +50,7 @@ body {
     flex-direction: column;
     gap: 5rem;
     justify-content: space-around;
+
 }
 .menu figure{
     margin: 0 auto;
