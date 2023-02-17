@@ -4,6 +4,8 @@
     --lobster-font: 'Roboto Mono', monospace;
 
     --img-corners: url(../img/menu-corners.png);
+
+    --radio-change-state: url(../img/radio-on-hover.png);
 }
 
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
@@ -122,13 +124,23 @@ header h3{
 
 /* CSS for Radio Box */
 #radio-box{
-    background-color: aqua;
+    background-image: url(../img/radio-on.png);
+    background-size: 100% 100%;
+
     width: 20rem;
     height: 40rem;
 
     margin: 0 auto;
 }
+#radio-box p{
+    max-width: 5rem;
+    margin: 0 auto;
+    text-align: center;
 
+}
+#radio-box:hover{
+    background-image: var(--radio-change-state);
+}
 
 
 /* Class for making YouTube/Vimeo videos responsive */
@@ -173,8 +185,12 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	body{
         background-color: maroon;
     }
-	
-	
+	#radio-box{
+        background-image: url(../img/radio-off.png);
+    }
+	:root{
+        --radio-change-state: url(../img/radio-off.png);
+    }
 	
 } /* closes 481px+ */
 
