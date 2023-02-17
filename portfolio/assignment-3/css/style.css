@@ -25,13 +25,29 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
+	background-color:crimson;
 	
 }
 
 
 #container {
 	
+}
+/* CSS for header */
+header{
+    background-color: black;
+}
+header h1{
+    font-family: var(--lobster-font);
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    border: 0.5rem groove gold;
+}
+header h3{
+    color:white;
+    text-align: center;
+    padding: 0.5rem;
 }
 
 
@@ -69,8 +85,9 @@ body {
 }
 .menu img{
     border: 1rem solid black;
-
     border-radius: 100%;
+
+    background-color: darkgray;
 }
 .menu p{
     font-family: var(--lobster-font);
