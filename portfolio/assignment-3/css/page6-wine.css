@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+:root{
+    --lobster-font: 'Roboto Mono', monospace;
+
+    --img-corners: url(../img/menu-corners.png);
+}
+
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+    background-color:firebrick;
+	
+}
+
+
+#container {
+	display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+/* CSS for header */
+header{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-family: var(--lobster-font);
+    text-align: center;
+    padding: 1.5rem;
+
+    color: white;
+    border: 0.5rem groove gold;
+    background-color: black;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+
+    max-width: 100%;
+    width: 100%;
+
+}
+nav a{
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 0.5rem 1rem;
+
+    width: 100%;
+
+    background-color: black;
+    border: 0.5rem groove white;
+
+}
+nav a:hover{
+    color: black;
+    background-color: white;
+    border: 0.5rem groove black;
+}
+
+
+
+.menu{
+    width: 100%;
+    max-width: 20rem;
+
+    height: 30rem;
+    border: 0.5rem solid black;
+
+    background-image: var(--img-corners);
+    background-size: 100% 100%;
+
+}
+.menu p{
+    font-family: var(--lobster-font);
+    
+    padding: 1.5rem;
+    background-color: gray;
+    text-align: center;
+    padding: 1rem;
+
+    margin: 1rem;
+}
+
+#description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#description p{
+    border: 0.5rem groove gold;
+    border-radius: 25%;
+}
+
+#name{
+    font-size: 2rem;
+    color: black;
+    border: 0.5rem groove gold;
+}
+.menu figure{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5rem;
+}
+.menu img{
+    border: 1rem solid black;
+    border-radius: 100%;
+
+    background-color: darkgray;
+}
+
+
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for iPads and tablets.  */
+@media all and (min-width: 481px) {
+	
+	
+	
+} /* closes 481px+ */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	
+	
+	
+} /* closes 769px+ */
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} /* closes 1024px+ */
+
+
+
+
+
