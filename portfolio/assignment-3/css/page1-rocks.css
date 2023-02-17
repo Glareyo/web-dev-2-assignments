@@ -25,64 +25,105 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-    background-color:maroon;
+    background-color:firebrick;
 	
 }
 
 
 #container {
-	
+	display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
 }
 /* CSS for header */
 header{
-    background-color: black;
-    
+    display: flex;
+    flex-direction: column;
 }
-header h1{
+h1{
     font-family: var(--lobster-font);
     text-align: center;
     padding: 1.5rem;
+
     color: white;
     border: 0.5rem groove gold;
-}
-header h3{
-    color:white;
-    text-align: center;
-    padding: 0.5rem;
+    background-color: black;
+    margin: 0;
 }
 
-
-/* CSS for Menu Section */
-#menu-section{
+nav{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;   
-    gap: 1rem; 
+
+    max-width: 100%;
+    width: 100%;
+
 }
+nav a{
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 0.5rem 1rem;
+
+    max-width: 20%;
+    width: 100%;
+
+    background-color: black;
+    border: 0.5rem groove white;
+
+}
+nav a:hover{
+    color: black;
+    background-color: white;
+    border: 0.5rem groove black;
+}
+
+
+
 .menu{
+    width: 100%;
+    max-width: 20rem;
+
+    height: 30rem;
+    border: 0.5rem solid black;
+
     background-image: var(--img-corners);
     background-size: 100% 100%;
-    text-decoration: none;
-    border: 0.5rem solid gold;
 
-    background-color: darkred;
-    padding: 10rem 2rem;
-    margin: 2rem;
-
-    width: 100%;
-    max-width: 20rem;   
 }
-.menu:hover{
-    border: 0.5rem solid gray;
-}
-.menu figure{
-    margin: 0 auto;
+.menu p{
+    font-family: var(--lobster-font);
+    
+    padding: 1.5rem;
+    background-color: gray;
+    text-align: center;
+    padding: 1rem;
 
+    margin: 1rem;
+}
+
+#description{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    justify-content: space-around;
-    align-content: baseline;
+    justify-content: center;
+}
+#description p{
+    border: 0.5rem groove gold;
+    border-radius: 25%;
+}
+
+#name{
+    font-size: 2rem;
+    color: black;
+    border: 0.5rem groove gold;
+}
+.menu figure{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5rem;
 }
 .menu img{
     border: 1rem solid black;
@@ -90,33 +131,8 @@ header h3{
 
     background-color: darkgray;
 }
-.menu p{
-    font-family: var(--lobster-font);
-    font-size: 2rem;
-    color: black;
 
-    text-align: center;
-    padding: 1.5rem;
-    background-color: gray;
-}
 
-/* CSS for Info */
-.info-section{
-    display: flex;
-    justify-content: space-evenly;
-}
-.info-background{
-    padding: 5rem;
-
-    /* max-width: 15rem; */
-    /* width: 100%; */
-    max-width: 5rem;
-    background-color: red;
-}
-.info-container{
-    display: block;
-    width: 50%;
-}
 
 
 /* Class for making YouTube/Vimeo videos responsive */
@@ -158,7 +174,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for iPads and tablets.  */
 @media all and (min-width: 481px) {
-	
 	
 	
 	
