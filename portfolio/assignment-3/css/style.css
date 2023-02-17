@@ -25,7 +25,7 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-    background-color: black;
+    background-color: black ;
 	
 }
 
@@ -119,6 +119,17 @@ header h3{
     max-width: 50%;
     width: 100%;
 }
+
+/* CSS for Radio Box */
+#radio-box{
+    background-color: aqua;
+    width: 20rem;
+    height: 40rem;
+
+    margin: 0 auto;
+}
+
+
 
 /* Class for making YouTube/Vimeo videos responsive */
 
