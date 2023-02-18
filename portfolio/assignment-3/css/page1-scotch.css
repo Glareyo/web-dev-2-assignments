@@ -122,7 +122,7 @@ nav a:hover{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 .menu img{
     border: 1rem solid black;
