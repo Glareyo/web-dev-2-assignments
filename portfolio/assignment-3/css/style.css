@@ -150,6 +150,12 @@ header h3{
     border-top: 1rem groove gold;
     border-bottom: 1rem groove gold;
 }
+footer{
+    margin: 5rem 0;
+    font: 0.2rem;
+    text-align: center;
+    background-color: gold;
+}
 
 /* Class for making YouTube/Vimeo videos responsive */
 

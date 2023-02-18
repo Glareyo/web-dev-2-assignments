@@ -130,7 +130,12 @@ nav a:hover{
 
     background-color: darkgray;
 }
-
+footer{
+    margin: 5rem 0;
+    font: 0.2rem;
+    text-align: center;
+    background-color: gold;
+}
 
 
 
