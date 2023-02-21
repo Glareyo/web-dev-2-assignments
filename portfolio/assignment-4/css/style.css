@@ -25,7 +25,18 @@ body {
 #container {
 	
 }
-
+/* CSS for header */
+header{
+    background-color: green;
+    padding: 4rem 4rem 4rem 8rem;
+    display: flex;
+}
+#nav-drop-button{
+    padding: 1rem;
+    background-color: red;
+}
+header h1{
+}
 
 /* CSS for image-boxes */
 #image-boxes-container{
