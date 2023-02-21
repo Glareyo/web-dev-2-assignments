@@ -37,10 +37,14 @@ body {
 }
 .image-box{
     background-color: black;
-    border: 1rem solid whitesmoke;
+    border: 1rem solid gainsboro;
 }
 .image-box figcaption{
     background-color: whitesmoke;
+    text-align: center;
+    padding: 0.5rem;
+
+    font-size: 1.5rem;
 }
 
 
