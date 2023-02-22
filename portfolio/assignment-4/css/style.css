@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
 	margin:0px;
@@ -28,14 +31,22 @@ body {
 /* CSS for header */
 header{
     background-color: green;
-    padding: 4rem 4rem 4rem 8rem;
+    padding: 4rem 4rem 4rem 2rem;
     display: flex;
+    gap: 5rem;
+
+    align-items: center;
 }
 #nav-drop-button{
-    padding: 1rem;
-    background-color: red;
+    background-image: url(../img/nav-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 5rem;
+    height: 5rem;
 }
-header h1{
+#header-title{
+    font-family: 'Roboto Mono';
 }
 
 /* CSS for image-boxes */
