@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
 :root{
-    --cherry-pie-anim: 2s anim1 infinite;
     --no-anim-state: 0s initial;
+    --hovering-image-anim-var: image-box-hover 1s alternate-reverse infinite ease;
+
+    --cherry-pie-anim-var: var(--no-anim-state);
+    --apple-pie-anim-var: var(--no-anim-state);
+    --banana-pie-anim-var: var(--no-anim-state);
+    --cookies-n-cream-pie-anim-var: var(--no-anim-state);
+    --cranberry-pie-anim-var: var(--no-anim-state);
+    --blueberry-pie-anim-var: var(--no-anim-state);
+    --pecan-pie-anim-var: var(--no-anim-state);
+    --pumpkin-pie-anim-var: var(--no-anim-state);
 }
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
@@ -133,9 +142,6 @@ nav a:hover{
 .image-box figure{
     margin: 0;
 }
-.image-box:hover{
-    animation: image-box-hover 1s alternate-reverse infinite ease;
-}
 .image-box figcaption{
     background-color: whitesmoke;
     text-align: center;
@@ -149,31 +155,68 @@ nav a:hover{
 
 
 /* CSS for Image box animations */
-/* Each box will have an error or animation specifically dedicated to them */
 
+
+/* CSS for image boxes when hovering */
+#cherry-pie-box:hover{
+    --cherry-pie-anim-var: var(--hovering-image-anim-var);
+}
+#cherry-pie-box:hover + *{
+    --apple-pie-anim-var: var(--hovering-image-anim-var);
+}
+#apple-pie-box:hover{
+    --apple-pie-anim-var: var(--hovering-image-anim-var);  
+}
+#apple-pie-box:hover + *{
+    --cherry-pie-anim-var: var(--hovering-image-anim-var);
+}
+
+
+#banana-pie-box:hover{
+    --banana-pie-anim-var: var(--hovering-image-anim-var);
+}
+#cookies-and-cream-box:hover{
+    --cookies-n-cream-pie-anim-var: var(--hovering-image-anim-var);
+}
+#cranberry-pie-box:hover{
+    --cranberry-pie-anim-var: var(--hovering-image-anim-var);
+}
+#blueberry-pie-box:hover{
+    --blueberry-pie-anim-var: var(--hovering-image-anim-var);
+}
+#pecan-pie-box:hover{
+    --pecan-pie-anim-var: var(--hovering-image-anim-var);
+}
+#pumpkin-pie-box:hover{
+    --pumpkin-pie-anim-var: var(--hovering-image-anim-var);
+}
+
+
+/* Each box will have an error or animation specifically dedicated to them */
 #cherry-pie-box{
+    animation: var(--cherry-pie-anim-var);
 }
 #apple-pie-box{
+    animation: var(--apple-pie-anim-var);
 }
 #banana-pie-box{
-    
+    animation: var(--banana-pie-anim-var);
 }
 #cookies-and-cream-box{
-    
+    animation: var(--cookies-n-cream-pie-anim-var);    
 }
 #cranberry-pie-box{
-    
+    animation: var(--cranberry-pie-anim-var);
 }
 #blueberry-pie-box{
-    
+    animation: var(--blueberry-pie-anim-var);
 }
 #pecan-pie-box{
-    
+    animation: var(--pecan-pie-anim-var);
 }
 #pumpkin-pie-box{
-    
+    animation: var(--pumpkin-pie-anim-var);
 }
-
 
 
 /* Class for making YouTube/Vimeo videos responsive */
@@ -242,40 +285,17 @@ You can adjust the min-width numbers below, and add as many new media queries as
 } /* closes 1024px+ */
 
 
+
+/* Generalized Key Frames */
 @keyframes image-box-hover{
     from {transform: rotate(15deg);}
     to{transform: rotate(-15deg);}
 }
-
-/* Animations for each pie box */
 @keyframes nav-fall{
     0% {transform: scaleY(100%);}
     50% {transform: rotate(45deg);}
 }
-@keyframes cherry-pie-anim{
-   
-}
-@keyframes apple-pie-anim{
-    
-}
-@keyframes banana-pie-anim{
-    
-}
-@keyframes cookies-n-cream-pie-anim{
-    
-}
-@keyframes cranberry-pie-anim{
-    
-}
-@keyframes blueberry-pie-anim{
-    
-}
-@keyframes pecan-pie-anim{
-    
-}
-@keyframes pumpkin-pie-anim{
-    
-}
+
 
 
 
