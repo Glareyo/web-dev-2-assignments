@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
-
+:root{
+    --cherry-pie-anim: 2s anim1 infinite;
+    --no-anim-state: 0s initial;
+}
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
 	margin:0px;
@@ -148,15 +151,9 @@ nav a:hover{
 /* CSS for Image box animations */
 /* Each box will have an error or animation specifically dedicated to them */
 
-#cherry-pie-box:link{
-    color: red;
+#cherry-pie-box{
 }
-#cherry-pie-box:visited{
-    color: green;
-}
-
 #apple-pie-box{
-    
 }
 #banana-pie-box{
     
@@ -256,8 +253,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
     50% {transform: rotate(45deg);}
 }
 @keyframes cherry-pie-anim{
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+   
 }
 @keyframes apple-pie-anim{
     
