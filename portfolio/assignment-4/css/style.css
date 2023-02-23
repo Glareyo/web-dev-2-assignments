@@ -62,14 +62,9 @@ header{
     transform: rotate(90deg);
 }
 #nav-drop-button:hover + nav{
-    transform:scaleY(100%)
+    animation: nav-fall 1s forwards;
 }
-nav:hover{
-    transform:scaleY(100%)
-}
-nav:hover + #nav-drop-button{
-    transform: rotate(90deg);
-}
+
 
 
 nav{
@@ -131,6 +126,14 @@ nav a:hover{
     background-color: black;
     border: 1rem solid gainsboro;
 }
+.image-box a{
+    color: black;
+}
+.image-box:hover{
+    animation: image-box-hover 1s alternate-reverse infinite ease;
+}
+
+
 .image-box figcaption{
     background-color: whitesmoke;
     text-align: center;
@@ -141,6 +144,37 @@ nav a:hover{
 #cookies-n-cream-box figcaption{
     font-size: 1rem;
 }
+
+
+/* CSS for Image box animations */
+/* Each box will have an error or animation specifically dedicated to them */
+
+
+#cherry-pie-box a:visited ~ #cherry-pie-box{
+    transform: skewX(50rem);
+} 
+#apple-pie-box{
+    
+}
+#banana-pie-box{
+    
+}
+#cookies-and-cream-box{
+    
+}
+#cranberry-pie-box{
+    
+}
+#blueberry-pie-box{
+    
+}
+#pecan-pie-box{
+    
+}
+#pumpkin-pie-box{
+    
+}
+
 
 
 /* Class for making YouTube/Vimeo videos responsive */
@@ -208,6 +242,42 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	
 } /* closes 1024px+ */
 
+
+@keyframes image-box-hover{
+    from {transform: rotate(45deg);}
+    to{transform: rotate(-45deg);}
+}
+
+/* Animations for each pie box */
+@keyframes nav-fall{
+    0% {transform: scaleY(100%);}
+    50% {transform: rotate(45deg);}
+}
+@keyframes cherry-pie-anim{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes apple-pie-anim{
+    
+}
+@keyframes banana-pie-anim{
+    
+}
+@keyframes cookies-n-cream-pie-anim{
+    
+}
+@keyframes cranberry-pie-anim{
+    
+}
+@keyframes blueberry-pie-anim{
+    
+}
+@keyframes pecan-pie-anim{
+    
+}
+@keyframes pumpkin-pie-anim{
+    
+}
 
 
 
