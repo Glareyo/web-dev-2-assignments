@@ -114,7 +114,7 @@ nav a:hover{
 
 /* CSS for image-boxes */
 #image-boxes-container{
-    margin-top: 5rem;
+    margin-top: 10rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -122,18 +122,17 @@ nav a:hover{
     justify-content: space-evenly;
     gap: 1vh;
 }
+
 .image-box{
     background-color: black;
     border: 1rem solid gainsboro;
 }
-.image-box a{
-    color: black;
+.image-box figure{
+    margin: 0;
 }
 .image-box:hover{
     animation: image-box-hover 1s alternate-reverse infinite ease;
 }
-
-
 .image-box figcaption{
     background-color: whitesmoke;
     text-align: center;
@@ -149,10 +148,13 @@ nav a:hover{
 /* CSS for Image box animations */
 /* Each box will have an error or animation specifically dedicated to them */
 
+#cherry-pie-box:link{
+    color: red;
+}
+#cherry-pie-box:visited{
+    color: green;
+}
 
-#cherry-pie-box a:visited ~ #cherry-pie-box{
-    transform: skewX(50rem);
-} 
 #apple-pie-box{
     
 }
@@ -244,8 +246,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 
 @keyframes image-box-hover{
-    from {transform: rotate(45deg);}
-    to{transform: rotate(-45deg);}
+    from {transform: rotate(15deg);}
+    to{transform: rotate(-15deg);}
 }
 
 /* Animations for each pie box */
