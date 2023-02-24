@@ -35,6 +35,21 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 body {}
 
+footer{
+    background-color: goldenrod;
+    border-top: 2rem solid gainsboro;
+    margin-top: 1rem;
+}
+#footer-info{
+    margin: 1rem auto 2rem 5rem;
+    padding: 1rem;
+}
+footer h4{
+    margin: 0;
+}
+footer p{
+    margin: 0;
+}
 
 #container {}
 
@@ -142,6 +157,7 @@ nav a:hover {
 }
 
 .image-box {
+    text-decoration: none;
     background-color: black;
     border: 1rem solid gainsboro;
 }
@@ -173,10 +189,17 @@ nav a:hover {
 
 #cherry-pie-box:hover+#apple-pie-box {
     --apple-pie-anim-var: cherry-box-hovering 1s alternate infinite;
+    transition-duration: 3s;
+    border-color: red;
+    background-color: blue;
+    color:gray;
 }
-
 #cherry-pie-box:hover~#banana-pie-box {
     --banana-pie-anim-var: cherry-box-hovering 3s alternate infinite;
+    transition-duration: 1s;
+    border-color: cyan;
+    background-color: yellow;
+    color:green;
 }
 
 /* Apple Box Hovering */
@@ -186,10 +209,18 @@ nav a:hover {
 
 #apple-pie-box:hover+#banana-pie-box {
     --banana-pie-anim-var: apple-box-hovering 3s alternate infinite;
+    transition-duration: 1s;
+    border-color: darkgray;
+    background-color: gray;
+    color:gainsboro;
 }
 
 #apple-pie-box:hover~#cookies-n-cream-box {
     --cookies-n-cream-pie-anim-var: cherry-box-hovering 2s alternate infinite;
+    transition-duration: 5s;
+    border-color: red;
+    background-color: darkred;
+    color:rebeccapurple;
 }
 
 /* Banana Box Hovering */
@@ -199,18 +230,34 @@ nav a:hover {
 
 #banana-pie-box:hover+* {
     --cookies-n-cream-pie-anim-var: banana-box-hovering 2s alternate infinite;
+    transition-duration: 1s;
+    border-color: purple;
+    background-color: palevioletred;
+    color:plum;
 }
 
 #banana-pie-box:hover~#cranberry-pie-box {
     --cranberry-pie-anim-var: banana-box-hovering 2s alternate infinite;
+    transition-duration: 1s;
+    border-color: palevioletred;
+    background-color: plum;
+    color:purple;
 }
 
 #banana-pie-box:hover+* figure {
     animation: banana-box-hovering-img 2s alternate infinite;
+    transition-duration: 1s;
+    border-color: black;
+    background-color: blanchedalmond;
+    color: whitesmoke;
 }
 
 #banana-pie-box:hover~#cranberry-pie-box figure {
     animation: banana-box-hovering-img 2s alternate infinite;
+    transition-duration: 4s;
+    border-color: whitesmoke;
+    background-color: white;
+    color:wheat;
 }
 
 /* Cookies n Cream Box Hovering */
@@ -220,11 +267,21 @@ nav a:hover {
 
 #cookies-n-cream-box:hover+#cranberry-pie-box {
     --cranberry-pie-anim-var: cookies-n-cream-box-hovering 2s alternate infinite;
+    transition-duration: 1s;
+    border-color: yellow;
+    background-color: yellowgreen;
+    color:gold;
 }
 
 #cookies-n-cream-box:hover~#blueberry-pie-box {
     --blueberry-pie-anim-var: cookies-n-cream-box-hovering 2s alternate infinite;
+    transition-duration: 1s;
+    border-color: yellowgreen;
+    background-color: gold;
+    color:yellowgreen;
 }
+
+
 
 /* Cranberry Pie Box */
 #cranberry-pie-box:hover {
@@ -233,10 +290,18 @@ nav a:hover {
 
 #cranberry-pie-box:hover+#blueberry-pie-box {
     --blueberry-pie-anim-var: cranberry-box-hovering 2s alternate infinite;
+    transition-duration: 1s;
+    border-color: red;
+    background-color: pink;
+    color: orangered;   
 }
 
 #cranberry-pie-box:hover~#pecan-pie-box {
     --pecan-pie-anim-var: cranberry-box-hovering 3s alternate infinite;
+    transition-duration: 1s;
+    border-color: pink;
+    background-color: orangered;
+    color:red;
 }
 
 
@@ -247,10 +312,18 @@ nav a:hover {
 
 #blueberry-pie-box:hover+#pecan-pie-box {
     --pecan-pie-anim-var: blueberry-box-hovering 5s alternate infinite;
+    transition-duration: 1s;
+    border-color: orange;
+    background-color: orangered;
+    color:olive;
 }
 
 #blueberry-pie-box:hover~#pumpkin-pie-box {
     --pumpkin-pie-anim-var: blueberry-box-hovering 5s alternate infinite;
+    transition-duration: 1s;
+    border-color: olive;
+    background-color: green;
+    color:goldenrod;
 }
 
 #blueberry-pie-box:hover+#pecan-pie-box img{
@@ -269,7 +342,12 @@ nav a:hover {
 
 #pecan-pie-box:hover+#pumpkin-pie-box {
     --pumpkin-pie-anim-var: pecan-box-hovering 5s infinite alternate;
+    transition-duration: 1s;
+    border-color: gold;
+    background-color: gold;
+    color:gold;
 }
+
 
 
 /* Pumpkin Pie Box */
@@ -383,11 +461,11 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 @keyframes nav-fall {
     0% {
-        transform: scaleY(100%);
+        transform: translate(0) scale(100%) rotate(0deg);
     }
 
-    50% {
-        transform: rotate(45deg);
+    100% {
+        transform: translate(500rem) scale(100%) rotate(3600deg);
     }
 }
 
