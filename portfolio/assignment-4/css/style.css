@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
-:root{
+:root {
     --no-anim-state: 0s initial;
     --hovering-image-anim-var: image-box-hover 1s alternate-reverse infinite ease;
 
@@ -13,16 +13,18 @@
     --pecan-pie-anim-var: var(--no-anim-state);
     --pumpkin-pie-anim-var: var(--no-anim-state);
 }
+
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
-html, body {
-	margin:0px;
-	padding:0px;
-	height:100%;
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
 }
 
 html {
-		/* Standard text-settings below */
-	font-size: 1em;
+    /* Standard text-settings below */
+    font-size: 1em;
     line-height: 1.4em;
 }
 
@@ -31,17 +33,13 @@ html {
 
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
-body {
-	
-	
-}
+body {}
 
 
-#container {
-	
-}
+#container {}
+
 /* CSS for header */
-header{
+header {
     background-color: green;
     padding: 4rem 4rem 4rem 2rem;
     display: flex;
@@ -50,19 +48,20 @@ header{
     align-items: center;
 }
 
-#header-title{
-    font-family: 'Roboto Mono'  ;
+#header-title {
+    font-family: 'Roboto Mono';
 }
 
 
 
 /* CSS for nav */
-#nav-container{
+#nav-container {
     position: absolute;
     display: flex;
     flex-direction: column;
 }
-#nav-drop-button{
+
+#nav-drop-button {
     background-image: url(../img/nav-icon.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,23 +69,26 @@ header{
     width: 5rem;
     height: 5rem;
 }
-#nav-drop-button:hover{
+
+#nav-drop-button:hover {
     transform: rotate(90deg);
 }
-#nav-drop-button:hover + nav{
+
+#nav-drop-button:hover+nav {
     animation: nav-fall 1s forwards;
 }
 
 
 
-nav{
+nav {
     border: 0.5rem solid gray;
-    background-color:darkgray;
+    background-color: darkgray;
     max-width: 10rem;
     /* When nav is closed */
     transform: scaleY(0%);
 }
-nav h3{
+
+nav h3 {
     text-align: center;
     background-color: whitesmoke;
 
@@ -95,19 +97,22 @@ nav h3{
 
     max-width: 100%;
 }
-nav ul{
+
+nav ul {
     width: 100%;
 
     padding-left: 0;
     margin-left: 0;
     list-style: none;
-    text-align:center;
+    text-align: center;
 
 }
-nav ul li{
+
+nav ul li {
     margin: 2rem 0;
 }
-nav a{
+
+nav a {
     background-color: gainsboro;
     padding: 0.5rem 1.6rem;
     border: 0.5rem solid black;
@@ -116,7 +121,8 @@ nav a{
     text-decoration: none;
     color: black
 }
-nav a:hover{
+
+nav a:hover {
     background-color: black;
     border-color: gainsboro;
     color: gainsboro;
@@ -125,7 +131,7 @@ nav a:hover{
 
 
 /* CSS for image-boxes */
-#image-boxes-container{
+#image-boxes-container {
     margin-top: 10rem;
 
     display: flex;
@@ -135,21 +141,24 @@ nav a:hover{
     gap: 1vh;
 }
 
-.image-box{
+.image-box {
     background-color: black;
     border: 1rem solid gainsboro;
 }
-.image-box figure{
+
+.image-box figure {
     margin: 0;
 }
-.image-box figcaption{
+
+.image-box figcaption {
     background-color: whitesmoke;
     text-align: center;
     padding: 0.5rem;
 
     font-size: 1.5rem;
 }
-#cookies-n-cream-box figcaption{
+
+#cookies-n-cream-box figcaption {
     font-size: 1rem;
 }
 
@@ -158,63 +167,147 @@ nav a:hover{
 
 
 /* CSS for image boxes when hovering */
-#cherry-pie-box:hover{
+#cherry-pie-box:hover {
     --cherry-pie-anim-var: var(--hovering-image-anim-var);
 }
-#cherry-pie-box:hover + *{
+
+#cherry-pie-box:hover+#apple-pie-box {
+    --apple-pie-anim-var: cherry-box-hovering 1s alternate infinite;
+}
+
+#cherry-pie-box:hover~#banana-pie-box {
+    --banana-pie-anim-var: cherry-box-hovering 3s alternate infinite;
+}
+
+/* Apple Box Hovering */
+#apple-pie-box:hover {
     --apple-pie-anim-var: var(--hovering-image-anim-var);
 }
-#apple-pie-box:hover{
-    --apple-pie-anim-var: var(--hovering-image-anim-var);  
-}
-#apple-pie-box:hover + *{
-    --cherry-pie-anim-var: var(--hovering-image-anim-var);
+
+#apple-pie-box:hover+#banana-pie-box {
+    --banana-pie-anim-var: apple-box-hovering 3s alternate infinite;
 }
 
+#apple-pie-box:hover~#cookies-n-cream-box {
+    --cookies-n-cream-pie-anim-var: cherry-box-hovering 2s alternate infinite;
+}
 
-#banana-pie-box:hover{
+/* Banana Box Hovering */
+#banana-pie-box:hover {
     --banana-pie-anim-var: var(--hovering-image-anim-var);
 }
-#cookies-and-cream-box:hover{
+
+#banana-pie-box:hover+* {
+    --cookies-n-cream-pie-anim-var: banana-box-hovering 2s alternate infinite;
+}
+
+#banana-pie-box:hover~#cranberry-pie-box {
+    --cranberry-pie-anim-var: banana-box-hovering 2s alternate infinite;
+}
+
+#banana-pie-box:hover+* figure {
+    animation: banana-box-hovering-img 2s alternate infinite;
+}
+
+#banana-pie-box:hover~#cranberry-pie-box figure {
+    animation: banana-box-hovering-img 2s alternate infinite;
+}
+
+/* Cookies n Cream Box Hovering */
+#cookies-n-cream-box:hover {
     --cookies-n-cream-pie-anim-var: var(--hovering-image-anim-var);
 }
-#cranberry-pie-box:hover{
+
+#cookies-n-cream-box:hover+#cranberry-pie-box {
+    --cranberry-pie-anim-var: cookies-n-cream-box-hovering 2s alternate infinite;
+}
+
+#cookies-n-cream-box:hover~#blueberry-pie-box {
+    --blueberry-pie-anim-var: cookies-n-cream-box-hovering 2s alternate infinite;
+}
+
+/* Cranberry Pie Box */
+#cranberry-pie-box:hover {
     --cranberry-pie-anim-var: var(--hovering-image-anim-var);
 }
-#blueberry-pie-box:hover{
+
+#cranberry-pie-box:hover+#blueberry-pie-box {
+    --blueberry-pie-anim-var: cranberry-box-hovering 2s alternate infinite;
+}
+
+#cranberry-pie-box:hover~#pecan-pie-box {
+    --pecan-pie-anim-var: cranberry-box-hovering 3s alternate infinite;
+}
+
+
+/* Blueberry Pie Box */
+#blueberry-pie-box:hover {
     --blueberry-pie-anim-var: var(--hovering-image-anim-var);
 }
-#pecan-pie-box:hover{
+
+#blueberry-pie-box:hover+#pecan-pie-box {
+    --pecan-pie-anim-var: blueberry-box-hovering 5s alternate infinite;
+}
+
+#blueberry-pie-box:hover~#pumpkin-pie-box {
+    --pumpkin-pie-anim-var: blueberry-box-hovering 5s alternate infinite;
+}
+
+#blueberry-pie-box:hover+#pecan-pie-box img{
+    animation: blueberry-box-hovering-img 5s alternate infinite;
+}
+
+#blueberry-pie-box:hover~#pumpkin-pie-box img{
+    animation: blueberry-box-hovering-img 5s alternate infinite;
+}
+
+
+/* Pecan Pie Box */
+#pecan-pie-box:hover {
     --pecan-pie-anim-var: var(--hovering-image-anim-var);
 }
+
+#pecan-pie-box:hover+#pumpkin-pie-box {
+    --pumpkin-pie-anim-var: pecan-box-hovering 5s infinite alternate;
+}
+
+
+/* Pumpkin Pie Box */
 #pumpkin-pie-box:hover{
     --pumpkin-pie-anim-var: var(--hovering-image-anim-var);
 }
 
 
 /* Each box will have an error or animation specifically dedicated to them */
-#cherry-pie-box{
+#cherry-pie-box {
     animation: var(--cherry-pie-anim-var);
 }
-#apple-pie-box{
+
+#apple-pie-box {
     animation: var(--apple-pie-anim-var);
 }
-#banana-pie-box{
+
+#banana-pie-box {
     animation: var(--banana-pie-anim-var);
 }
-#cookies-and-cream-box{
-    animation: var(--cookies-n-cream-pie-anim-var);    
+
+#cookies-n-cream-box {
+    animation: var(--cookies-n-cream-pie-anim-var);
 }
-#cranberry-pie-box{
+
+#cranberry-pie-box {
     animation: var(--cranberry-pie-anim-var);
 }
-#blueberry-pie-box{
+
+#blueberry-pie-box {
     animation: var(--blueberry-pie-anim-var);
 }
-#pecan-pie-box{
+
+#pecan-pie-box {
     animation: var(--pecan-pie-anim-var);
 }
-#pumpkin-pie-box{
+
+#pumpkin-pie-box {
     animation: var(--pumpkin-pie-anim-var);
 }
 
@@ -223,7 +316,8 @@ nav a:hover{
 
 figure.responsive {
     position: relative;
-    padding-bottom: 56.25%;  /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0px;
     overflow: hidden;
     max-width: 100%;
@@ -250,53 +344,157 @@ hr {
 }
 
 
-
 /* ========================================
 MEDIA QUERIES!
 You can adjust the min-width numbers below, and add as many new media queries as you need.
 ======================================== */
 
 /* Minimum width for iPads and tablets.  */
-@media all and (min-width: 481px) {
-	
-	
-	
-	
-} /* closes 481px+ */
+@media all and (min-width: 481px) {}
+
+/* closes 481px+ */
 
 
 
 /* Minimum width for laptops. */
-@media all and (min-width: 769px) {
-	
-	
-	
-	
-} /* closes 769px+ */
+@media all and (min-width: 769px) {}
+
+/* closes 769px+ */
 
 
 
 /* Minimum width for desktop screens. */
-@media all and (min-width: 1024px) {
-	
-	
-	
-	
-} /* closes 1024px+ */
+@media all and (min-width: 1024px) {}
+
+/* closes 1024px+ */
 
 
 
 /* Generalized Key Frames */
-@keyframes image-box-hover{
-    from {transform: rotate(15deg);}
-    to{transform: rotate(-15deg);}
+@keyframes image-box-hover {
+    from {
+        transform: rotate(15deg);
+    }
+
+    to {
+        transform: rotate(-15deg);
+    }
 }
-@keyframes nav-fall{
-    0% {transform: scaleY(100%);}
-    50% {transform: rotate(45deg);}
+
+@keyframes nav-fall {
+    0% {
+        transform: scaleY(100%);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
 }
 
+@keyframes cherry-box-hovering {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    50% {
+        transform: rotate(180deg) translate(30rem);
+    }
 
+    100% {
+        transform: rotate(360deg) translate(50rem);
+    }
+}
 
+@keyframes apple-box-hovering {
+    0% {
+        transform: rotate(0deg) scaleX(100%);
+    }
 
+    100% {
+        transform: rotate(360deg) scaleX(10%);
+    }
+}
+
+@keyframes banana-box-hovering {
+    0% {
+        transform: rotate(0deg) scaleY(100%);
+    }
+
+    30% {
+        transform: rotate(0deg) scaleY(170%);
+    }
+
+    60% {
+        transform: rotate(0deg) scale(170%);
+    }
+
+    100% {
+        transform: rotate(360deg) scaleX(100%);
+    }
+}
+
+@keyframes banana-box-hovering-img {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cookies-n-cream-box-hovering {
+    0% {
+        transform: translate(4rem)rotate(0deg);
+    }
+
+    50% {
+        transform: translate(8rem) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(20rem) rotate(50deg);
+    }
+
+    100% {
+        transform: translate(-30rem) rotate(1280deg);
+    }
+}
+
+@keyframes cranberry-box-hovering {
+    0% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+
+    50% {
+        transform: scaleX(100%) scaleY(150%);
+    }
+
+    75% {
+        transform: scaleX(200%) scaleY(150%);
+    }
+
+    100% {
+        transform: scaleX(250%) scaleY(250%);
+    }
+}
+
+@keyframes blueberry-box-hovering {
+    0%{transform: translate(0rem) rotate(0deg);}
+    50%{transform: translate(20rem) rotate(-360deg);}
+    100%{transform: translate(0rem) rotate(360deg);}
+}
+@keyframes blueberry-box-hovering-img{
+    0%{transform: translate(0rem) rotate(0deg);}
+    15%{transform: translate(0rem) rotate(0deg);}
+    50%{transform: translate(-20rem) rotate(-1080deg);}
+    60%{transform: translate(-20rem) rotate(-1080deg);}
+    100%{transform: translate(0rem) rotate(3070492deg);}
+}
+
+@keyframes pecan-box-hovering {
+    0%{transform: scale(100%) rotate(0deg);}
+    5%{transform: scale(100%) rotate(0deg);}
+    15%{transform: scale(125%) rotate(-10deg);}
+    100%{transform: scale(0%) rotate(3600deg);}
+}
