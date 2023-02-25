@@ -36,7 +36,7 @@ html {
 body {}
 
 footer{
-    background-color: goldenrod;
+    background-color: whitesmoke;
     border-top: 2rem solid gainsboro;
     margin-top: 1rem;
 }
@@ -55,7 +55,7 @@ footer p{
 
 /* CSS for header */
 header {
-    background-color: green;
+    background-color: whitesmoke;
     padding: 4rem 4rem 4rem 2rem;
     display: flex;
     gap: 5rem;
@@ -64,7 +64,12 @@ header {
 }
 
 #header-title {
-    font-family: 'Roboto Mono';
+    font-family:'Courier New', Courier, monospace;
+}
+header:hover{
+    background-image: url("../img/cherry-pie.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -142,24 +147,82 @@ nav a:hover {
     border-color: gainsboro;
     color: gainsboro;
 }
+/* CSS with about section */
+#about-pies{
+    margin: 5rem auto;
+    padding: 1rem;
+    max-width: 30rem;
+    background-color: whitesmoke;
+}
+#about-pies h2{
+    text-align: center;
+}
+#about-pies p{
+    padding: 1rem;
+}
 
+#about-pies:hover{
+    color: yellow;
+}
+
+/* CSS animations for about-pies */
+#about-pies:hover > :nth-child(1){
+    animation: about-pies-anim-images 1s infinite alternate;
+    background-color: orange;
+}
+#about-pies:hover > :nth-child(2){
+    animation: about-pies-anim-right 1s infinite;
+    background-color: red;
+}
+#about-pies:hover > :nth-child(3){
+    animation: about-pies-anim-left 1s infinite;
+    background-color: blue;
+}
+#about-pies:hover > :nth-child(4){
+    animation: about-pies-anim-right 1s infinite;
+    background-color: purple;
+}
+#about-pies:hover > :nth-child(5){
+    background-color: green;    
+    animation: about-pies-anim-left 1s infinite;
+}
+/* CSS of about section effecting pictures. */
+#about-pies:hover ~ *{
+    --cherry-pie-anim-var: about-pies-anim-images-1 1s infinite linear;
+    --apple-pie-anim-var: about-pies-anim-images-2 3s infinite linear;
+    --banana-pie-anim-var:  about-pies-anim-images-1 3s infinite linear;
+    --cookies-n-cream-pie-anim-var:  about-pies-anim-images-2 1s infinite linear;
+    --cranberry-pie-anim-var:  about-pies-anim-images-1 1s infinite linear;
+    --blueberry-pie-anim-var:  about-pies-anim-images-2 3s infinite linear;
+    --pecan-pie-anim-var:  about-pies-anim-images-1 3s infinite linear;
+    --pumpkin-pie-anim-var: about-pies-anim-images-2 1s infinite linear;
+}
+#credits{
+    font-size: 0.7rem;
+}
 
 
 /* CSS for image-boxes */
 #image-boxes-container {
-    margin-top: 10rem;
+    margin: 6rem auto 3rem auto;
+
+    
+    
+    max-width:75%;
 
     display: flex;
     flex-wrap: wrap;
 
     justify-content: space-evenly;
-    gap: 1vh;
+    gap: 0.5rem;
 }
 
 .image-box {
     text-decoration: none;
     background-color: black;
+    color: blue;
     border: 1rem solid gainsboro;
+    margin: 1rem auto;
 }
 
 .image-box figure {
@@ -575,4 +638,35 @@ You can adjust the min-width numbers below, and add as many new media queries as
     5%{transform: scale(100%) rotate(0deg);}
     15%{transform: scale(125%) rotate(-10deg);}
     100%{transform: scale(0%) rotate(3600deg);}
+}
+
+
+@keyframes about-pies-anim-right{
+    0%{transform:translate(0rem) rotate(0deg);}
+    15%{transform:translate(15rem) rotate(50deg);}
+    25%{transform:translate(25rem) rotate(75deg);}
+    50%{transform:translate(50rem) rotate(150deg);}
+    75%{transform:translate(25rem) rotate(75deg);}
+    90%{transform:translate(15rem) rotate(50deg);}
+    100%{transform:translate(0rem) rotate(0deg);}
+}
+@keyframes about-pies-anim-left{
+    0%{transform:translate(0rem) rotate(0deg);}
+    15%{transform:translate(-15rem) rotate(-50deg);}
+    25%{transform:translate(-25rem) rotate(-75deg);}
+    50%{transform:translate(-50rem) rotate(-150deg);}
+    75%{transform:translate(-25rem) rotate(-75deg);}
+    90%{transform:translate(-15rem) rotate(-50deg);}
+    100%{transform:translate(0rem) rotate(0deg);}
+}
+
+@keyframes about-pies-anim-images-1{
+    0%{transform:translateX(0rem) translateY(0rem) rotate(0deg);}
+    50%{transform:translateX(-20rem) translateY(-60rem) rotate(3600deg);}
+    100%{transform:translateX(0rem) translateY(0rem) rotate(7200deg);}
+}
+@keyframes about-pies-anim-images-2{
+    0%{transform:translateX(0rem) translateY(0rem) rotate(0deg);}
+    50%{transform:translateX(20rem) translateY(-60rem) rotate(3600deg);}
+    100%{transform:translateX(0rem) translateY(0rem) rotate(7200deg);}
 }
