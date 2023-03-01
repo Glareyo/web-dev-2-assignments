@@ -26,33 +26,51 @@ body {
 	
 }
 
+
+/* CSS for banner */
 #banner{
-
     margin: 0 auto;
-
-
     display: flex;
     justify-content: center;
 }
+#banner img{
+    max-width: 100%;
+}
+
 
 /* CSS for hidden content */
 #hidden-content{
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+
     max-width: 15rem;
     margin: 0 auto;
 }
 
 .content-container{
+    margin-top: 2rem;
+
     max-width: 20rem;
     width: 100%;
 
     display: flex;
+    flex-direction: column;
     gap: 2rem;
+
 }
+
+
 .content-container button{
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 100%;
+}
+
+/* CSS for images within hidden content */
+.content-container figure{
+    background-color: green;
+    padding: 0.2rem;
+    margin: 0 auto;
 }
 
 #arcade-container{
@@ -60,6 +78,10 @@ body {
 }
 #audio-container{
 
+}
+#audio-player{
+    width: 3rem;
+    height: 3rem;
 }
 #npc-container{
 
