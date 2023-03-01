@@ -28,6 +28,11 @@ body {
 
 #banner{
 
+    margin: 0 auto;
+
+
+    display: flex;
+    justify-content: center;
 }
 
 /* CSS for hidden content */
@@ -39,10 +44,15 @@ body {
 }
 
 .content-container{
-    display: flex;
-    height: 3rem;
-    max-width: 50%;
+    max-width: 20rem;
     width: 100%;
+
+    display: flex;
+    gap: 2rem;
+}
+.content-container button{
+    height: 3rem;
+    width: 3rem;
 }
 
 #arcade-container{
