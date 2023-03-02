@@ -204,8 +204,14 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	#banner img{
         max-width: 100%;
     }
-    
-	
+    .content-container{
+        margin-left: 5rem;
+        height: 15rem;
+        flex-direction: row;
+    }
+    #hidden-content{
+        padding-top: 5rem;
+    }
 	
 	
 } /* closes 1024px+ */
