@@ -17,7 +17,7 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
+	background-color: darkgray;
 	
 }
 
@@ -26,16 +26,17 @@ body {
 	
 }
 header{
+
     background-color: gray;
     padding: 1rem;
     border-bottom: solid black 0.5rem;
+
+    text-align: center;
 }
 header h1{
-    margin: 5% 0 2% 10%;
     font-size: 3rem;
-}
+}   
 header h2{
-    margin: 0 0 5% 10%;
 }
 
 
@@ -44,6 +45,7 @@ header h2{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    background-color: #3b3b3b;
 }
 #banner img{
     max-width: 100%;
@@ -58,6 +60,8 @@ header h2{
     gap: 2rem;
 
     margin: 0 auto;
+
+    background-color: #5b5b5b;
 }
 
 .content-container{
@@ -76,21 +80,32 @@ header h2{
 
 .content-container button{
     height: 4rem;
-    width: 50%;
+    width: 100%;
+    max-width: 25%;
+    background-color: gray;
+}
+.content-container button:hover{
+    background-color: darkgray; 
+}
+.content-container button:active{
+    background-color: black; 
 }
 
 /* CSS for images within hidden content */
 .content-container figure{
     background-color: lightgoldenrodyellow;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 60%;
+    
     width: 100%;
 
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    padding: 0.5rem 0 0.5rem 0;
+    gap: 2rem;
+
+    padding: 4rem 0 4rem 0;
 }
 
 
@@ -152,8 +167,19 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for iPads and tablets.  */
 @media all and (min-width: 481px) {
-	
-	
+	header{
+        text-align: left;
+    }
+    header h1{
+        margin: 5% 0 2% 10%;
+        font-size: 3rem;
+    }
+    header h2{
+        margin: 0 0 5% 5%;
+    }
+	.content-container figure{
+        gap: 0rem;
+    }
 	
 	
 } /* closes 481px+ */
@@ -162,7 +188,10 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-	
+	#banner img{
+        max-width: 80%;
+    }
+    
 	
 	
 	
@@ -172,7 +201,10 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-	
+	#banner img{
+        max-width: 100%;
+    }
+    
 	
 	
 	
