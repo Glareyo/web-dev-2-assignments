@@ -25,6 +25,18 @@ body {
 #container {
 	
 }
+header{
+    background-color: gray;
+    padding: 1rem;
+    border-bottom: solid black 0.5rem;
+}
+header h1{
+    margin: 5% 0 2% 10%;
+    font-size: 3rem;
+}
+header h2{
+    margin: 0 0 5% 10%;
+}
 
 
 /* CSS for banner */
