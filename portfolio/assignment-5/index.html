@@ -28,7 +28,7 @@
         </figure>
 
         <div id="hidden-content">
-            
+
             <div class="content-container" id="arcade-container">
                 <button id="arcade-button">View Arcade Machines</button>
                 <figure id="arcade-images">
@@ -48,7 +48,7 @@
             </div>
             <div class="content-container" id="npc-container">
                 <button id="npc-button">View NPCs</button>
-                <figure id="npc-image">
+                <figure id="npc-images">
                     <img src="img/frogger-skeletons.gif" alt="npc-gif">
                     <img src="img/frogger-skeletons.gif" alt="npc-gif">
                     <img src="img/frogger-skeletons.gif" alt="npc-gif">
@@ -65,7 +65,21 @@
     <!-- Write your jQuery code inside of the .ready() function below -->
     <script>
         $(document).ready(function () {
-
+            $("#arcade-button").click(function () {
+                $("#arcade-images").show();
+                $("#audio-player").hide();
+                $("#npc-images").hide();
+            });
+            $("#audio-button").click(function () {
+                $("#arcade-images").hide();
+                $("#audio-player").show();
+                $("#npc-images").hide();
+            });
+            $("#npc-button").click(function () {
+                $("#arcade-images").hide();
+                $("#audio-player").hide();
+                $("#npc-images").show();
+            });
 
 
 
