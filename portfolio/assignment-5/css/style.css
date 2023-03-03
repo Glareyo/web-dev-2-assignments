@@ -44,13 +44,23 @@ header h2{
 #banner{
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #3b3b3b;
 }
 #banner img{
     max-width: 100%;
 }
+#banner figcaption{
+    text-align: center;
+    padding: 3rem;
+    font-size: 2rem;
 
+    border-top: solid gray 0.5rem;
+    border-bottom: solid gray 0.5rem;
+
+    color: darkgray;
+}
 
 /* CSS for hidden content */
 #hidden-content{

@@ -25,6 +25,7 @@
 
         <figure id="banner">
             <img src="img/hub-world-gif.gif" alt="image-here">
+            <figcaption>Hub World was a College Project, where one has to create a small world containing several arcades.</figcaption>
         </figure>
 
         <div id="hidden-content">
@@ -69,20 +70,25 @@
     <!-- Write your jQuery code inside of the .ready() function below -->
     <script>
         $(document).ready(function() {
+
+            $("#arcade-images").hide();
+            $("#player-sprites-images").hide();
+            $("#npc-images").hide();
+
             $("#arcade-button").click(function () {
-                $("#arcade-images").show();
-                $("#player-sprites-images").hide();
-                $("#npc-images").hide();
+                $("#arcade-images").fadeIn();
+                $("#player-sprites-images").fadeOut();
+                $("#npc-images").fadeOut();
             });
             $("#player-sprites-button").click(function () {
-                $("#arcade-images").hide();
-                $("#player-sprites-images").show();
-                $("#npc-images").hide();
+                $("#arcade-images").fadeOut();
+                $("#player-sprites-images").fadeIn();
+                $("#npc-images").fadeOut();
             });
             $("#npc-button").click(function () {
-                $("#arcade-images").hide();
-                $("#player-sprites-images").hide();
-                $("#npc-images").show();
+                $("#arcade-images").fadeOut();
+                $("#player-sprites-images").fadeOut();
+                $("#npc-images").fadeIn();
             });
         
         
