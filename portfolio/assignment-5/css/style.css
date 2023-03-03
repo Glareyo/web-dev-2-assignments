@@ -54,13 +54,21 @@ header h2{
 #banner figcaption{
     text-align: center;
     padding: 3rem;
-    font-size: 2rem;
+    font-size: 1rem;
 
     border-top: solid gray 0.5rem;
     border-bottom: solid gray 0.5rem;
 
     color: darkgray;
 }
+#banner-button{
+    max-width: 30%;
+    width: 100%;
+    height: 3rem;
+
+    margin: 5rem auto;
+}
+
 
 /* CSS for hidden content */
 #hidden-content{
@@ -92,12 +100,14 @@ header h2{
     height: 4rem;
     width: 100%;
     max-width: 25%;
+}
+button{
     background-color: gray;
 }
-.content-container button:hover{
+button:hover{
     background-color: darkgray; 
 }
-.content-container button:active{
+button:active{
     background-color: black; 
 }
 
@@ -183,7 +193,9 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	.content-container figure{
         gap: 0rem;
     }
-	
+	#banner figcaption{
+        font-size: 1.5rem;
+    }
 	
 } /* closes 481px+ */
 
@@ -194,9 +206,12 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	#banner img{
         max-width: 80%;
     }
-    
-	
-	
+    #banner figcaption{
+        font-size: 2rem;
+    }
+	#banner img{
+        max-width: 100%;
+    }
 	
 } /* closes 769px+ */
 

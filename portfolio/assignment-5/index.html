@@ -23,7 +23,10 @@
     </header>
     <div id="container">
 
+
+
         <figure id="banner">
+            <button id="banner-button">View Cover</button>
             <img src="img/hub-world-gif.gif" alt="image-here">
             <figcaption>Hub World was a College Project, where one has to create a small world containing several arcades.</figcaption>
         </figure>
@@ -74,7 +77,21 @@
             $("#arcade-images").hide();
             $("#player-sprites-images").hide();
             $("#npc-images").hide();
+            $("#banner img").hide();
+            $("#arcade-button").hide();
+            $("#player-sprites-button").hide();
+            $("#npc-button").hide();
 
+
+            
+            $("#banner-button").click(function () {
+                $("#banner img").fadeIn();
+                $("#banner-button").hide();
+                $("#arcade-button").show();
+                $("#player-sprites-button").show();
+                $("#npc-button").show();
+            });
+            
             $("#arcade-button").click(function () {
                 $("#arcade-images").fadeIn();
                 $("#player-sprites-images").fadeOut();
