@@ -39,18 +39,23 @@
                 </figure>
             </div>
 
-            <div class="content-container" id="audio-container">
-                <button id="audio-button">Click Me!</button>
-                <figure id="audio-player">
-                    <audio src=""></audio>
+            <div class="content-container" id="player-sprites-container">
+                <button id="player-sprites-button">View Player Sprites</button>
+                <figure id="player-sprites-images">
+                    <img src="img/pacman-player.gif" alt="image-here">
+                    <img src="img/zelda-player-gif.gif" alt="image-here">
+                    <img src="img/platformer-player-gif.gif" alt="image-here">
+                    <img src="img/frogger-player-gif.gif" alt="image-here">
                 </figure>
             </div>
             <div class="content-container" id="npc-container">
-                <button id="npc-button">View NPCs</button>
+                <button id="npc-button">View Enemy NPCs</button>
                 <figure id="npc-images">
                     <img src="img/frogger-skeletons.gif" alt="npc-gif">
-                    <img src="img/frogger-skeletons.gif" alt="npc-gif">
-                    <img src="img/frogger-skeletons.gif" alt="npc-gif">
+                    <img src="img/platformer-enemy-walk.gif" alt="">
+                    <img src="img/platformer-enemy-fly.gif" alt="">
+                    <img src="img/pacman-enemy-gif.gif" alt="">
+                    <img src="img/zelda-zombie.gif" alt="">
                 </figure>
             </div>
         </div>
@@ -63,27 +68,27 @@
 
     <!-- Write your jQuery code inside of the .ready() function below -->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#arcade-button").click(function () {
                 $("#arcade-images").show();
-                $("#audio-player").hide();
+                $("#player-sprites-images").hide();
                 $("#npc-images").hide();
             });
-            $("#audio-button").click(function () {
+            $("#player-sprites-button").click(function () {
                 $("#arcade-images").hide();
-                $("#audio-player").show();
+                $("#player-sprites-images").show();
                 $("#npc-images").hide();
             });
             $("#npc-button").click(function () {
                 $("#arcade-images").hide();
-                $("#audio-player").hide();
+                $("#player-sprites-images").hide();
                 $("#npc-images").show();
             });
-
-
-
+        
+        
+        
         }); //close .ready()
-    </script>
+        </script>
 
 </body>
 
