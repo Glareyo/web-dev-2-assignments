@@ -107,6 +107,7 @@ header h2{
     height: 4rem;
     width: 100%;
     max-width: 25%;
+    color: black;
 }
 button{
     background-color: gray;
@@ -146,6 +147,13 @@ button:active{
 
 }
 
+
+footer{
+    border-top: solid 0.5rem black;
+}
+footer p{
+    padding: 2rem 0 2rem 3rem;
+}
 
 
 /* Class for making YouTube/Vimeo videos responsive */
