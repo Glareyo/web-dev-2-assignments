@@ -19,7 +19,7 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
+	background-color: black;
 	
 }
 
@@ -47,23 +47,22 @@ header h2{
 }
 
 #image-1,#image-2,#image-3{
-    height: 600px;
+    height: 100lvh;
     max-width: 100%;
     width: 100%;
 
 }
 #image-1{
     background: url(../img/main-menu.png) no-repeat fixed center;
-    background-size: cover;
-
+    background-size: contain;
 }
 #image-2{
     background: url(../img/choose-difficulty.png) no-repeat fixed center;
-    background-size: cover;
+    background-size: contain;
 }
 #image-3{
     background: url(../img/gameplay.png) no-repeat fixed center;
-    background-size: cover;
+    background-size: contain;
 }
 
 section{
