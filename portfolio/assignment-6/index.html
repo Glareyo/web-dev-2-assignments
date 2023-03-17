@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Scrolling Effects</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <div id="container">
+
+
+    <header>
+      <h1>My Perspective on Web Authors</h1>
+      <h2>Nehemiah Cedillo, 2/3/2023</h2>
+    </header>
+    <main>
+
+      <div id="image-1"></div>
+      <!-- <figure>
+        <img src="img/choose-difficulty.png" alt="">
+      </figure> -->
+
+      <section id="section-1">
+        <p>From my perspective, the role of web authors encompass several things aside from just developing websites.
+          From my perspective, web authors seem to take on a more active role in shaping the web, not only through
+          creating websites, but by also shaping how the web is for others, allowing other people to utilize tools on
+          the web without limitations.
+          In terms of society, web authors should still have an active role in development. As shown in the article,
+          the internet and World Wide Web were developed to be open and free to everyone who wants to develop a website.
+          With this, web authors have a significant role in society since the internet and the web are still developing
+          to this day and is still being used and spread across the world. Due to this, from my perspective, web authors
+          have an active, key role in terms of society in helping the web grow and shape itself for others to use openly
+          and creatively.</p>
+      </section>
+
+      <div id="image-2"></div>
+        <!-- 
+      <figure>
+        <img src="img/choose-difficulty.png" alt="">
+      </figure> -->
+
+      <section id="section-2">
+        <p id="section-2-p-1">With this, the role of web authors seem to also play an important part in terms of giving access to those who
+          are not web authors, allowing others to freely explore the web with little limitations imposed by Facebook or
+          Google. This also plays the role of reinforcing the idea of keeping the openness of the web, allowing others
+          to use the web as well.</p>
+        <p id="section-2-p-2">In business, web authors should also be active in its involvement. As the article states, Facebook and Google
+          have been utilizing their own servers, allowing themselves to publish websites and keep it within their own
+          servers, which can limit how web authors operate. As such, from my perspective, this seems to go against the
+          openness of the web, which web authors should continue to get involved in the business side of the web. </p>
+      </section>
+
+      <div id="image-3"></div>
+      <!-- <figure>
+        <img src="img/main-menu.png" alt="">
+      </figure> -->
+
+      <section id="section-3">
+        <p>Other than this, it also would allow others to freely explore the web with little limitations, rather than
+          being stuck to a specific server like Facebook or Google. On the other hand this, the role of web authors also
+          encompasses the role of business as well, since if specific servers, such as Facebook and google, have
+          limitations or a variety of different tools, then web authors must be aware of these tools. This also means
+          utilize the service that they can reliably create their websites and choosing which service best suits their
+          needs. </p>
+        <br>
+        <p>In conclusion, web authors play an active role in not only creating websites, but also in developing and
+          shaping the Web into keeping it more open for others to utilize its tools and openness to creativity. In
+          addition, web authors should continue taking an active role in the society and business side of the web,
+          helping keep the original idea of the web going. </p>
+        <br>
+      </section>
+
+
+    </main>
+    <footer>
+      &copy; Nehemiah Cedillo
+    </footer>
+
+
+
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+    $(document).ready(function () {
+
+    $(window).scroll(function(){
+      var windowOffset = $(window).scrollTop();
+      var targetOffset = 700;
+
+      //Section 1 JQuery
+      var section1Offset = $('#section-1').offset().top;
+      var sec1CurrentPos = section1Offset - windowOffset;
+      if (sec1CurrentPos < targetOffset ){
+        $('#section-1 p').show();
+        $('#section-1 p').addClass('section-1-anim');
+          //Display
+      }
+      else{
+        $('#section-1 p').hide();
+        $('#section-1 p').remove('section-1-anim');
+      }
+
+      //Section 2 JQuery
+      var section2Offset = $('#section-2').offset().top;
+      var sec2CurrentPos = section2Offset - windowOffset;
+      if (sec2CurrentPos < targetOffset ){
+        $('#section-2 p').show();
+          //Display
+      }
+      else{
+        $('#section-2 p').hide();
+      }
+      
+      //Section 3 JQuery
+      var section3Offset = $('#section-3').offset().top;
+      var sec3CurrentPos = section3Offset - windowOffset;
+      if (sec3CurrentPos < targetOffset ){
+        $('#section-3 p').show();
+        $('#section-3').addClass('color-shift');
+          //Display
+      }
+      else{
+        $('#section-3 p').hide();
+        $('#section-3').removeClass('color-shift');
+
+      }
+
+    }); //Window Closed
+
+
+    }); //close .ready()
+  </script>
+
+</body>
+
+</html>
