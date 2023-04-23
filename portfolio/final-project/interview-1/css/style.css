@@ -1,0 +1,254 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+	
+	
+}
+
+
+#container {
+	
+}
+
+
+
+
+
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+.question-section{
+    margin: 3rem auto;
+
+    max-width: 80%;
+    background-color: blanchedalmond;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    border: solid black 1rem;
+}
+.question-section h3{
+    background-color: gainsboro;
+    margin: 0;
+    padding: 1rem;
+
+    border-bottom: 0.5rem solid black;
+}
+.info-card-r figure{
+    border-right: 0.5rem solid black;
+    border-bottom: 0.5rem solid black;
+}
+.info-card-l figure{
+    border-bottom: 0.5rem solid black;
+}
+.question-section figure{
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-section img{
+    background-color: gray;
+
+    border-bottom: 0.5rem solid black;
+
+}
+.question-section figcaption{
+    font-size: 1.5rem;
+    text-align: center;
+    
+    padding: 1rem 0rem;
+
+    background-color: darkgray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question-section figcaption p{
+    background-color: darkgray;
+
+}
+.p-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: slategray;
+}
+.p-container p{
+    margin: 0;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    text-align: center;    
+    background-color: gainsboro;
+}
+.p-container em{
+    font-size: 4rem;
+    background-color: gainsboro;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for iPads and tablets.  */
+@media all and (min-width: 481px) {
+	*{background-color: red};
+    .question-section{
+        flex-direction: column;
+    }
+    .info-card-r{
+        display: flex;
+        flex-direction: column;
+    }
+    .info-card-l{
+        display: flex;
+        flex-direction: column;
+    }
+    .question-section figure{
+        max-width: 100%;
+        width: 100%;
+
+        background-color: gray;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .question-section img{
+        max-width: 50%;
+        border: none;
+    }
+    .question-section figcaption{
+        font-size: 1.5rem;
+        max-width: 50%;
+        padding: 1rem;
+
+        border-left: solid black 0.5rem;
+    }
+	
+} /* closes 481px+ */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	*{background-color: cyan};
+	.question-section{
+        flex-direction: column;
+    }
+    .info-card-r{
+        flex-direction: row;
+    }
+    
+    .info-card-l{
+        flex-direction:row-reverse;
+    }
+    .info-card-l figure{
+        border-left: 0.5rem solid black;
+    }
+    .question-section figure{
+        max-width: 50%;
+
+        flex-direction: column;
+        border-bottom: none;
+    }
+    .question-section img{
+        border-bottom: 0.5rem solid black;
+        max-width: 100%;
+        width: 100%;
+    }
+    .question-section figcaption{
+        max-width: 100%;
+        width: 100%;
+
+        font-size: 1rem;
+        text-align: center;
+    
+        padding: 1rem 0rem;
+        font-size: 1.5rem;
+        border: none;
+    }
+    .p-container{
+        max-width: 50%;
+        width: 100%;
+    }
+} /* closes 769px+ */
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	*{background-color: orange};
+	.question-section figure{
+        max-width: 30%;
+    }
+	.p-container{
+        max-width: 70%;
+        width: 100%;
+    }
+	
+	
+} /* closes 1024px+ */
+
+
+
+
+
