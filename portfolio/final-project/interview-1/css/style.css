@@ -177,7 +177,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
         border: none;
     }
     .question-section figcaption{
-        font-size: 1.5rem;
+        font-size: 1rem;
         max-width: 50%;
         padding: 1rem;
 
@@ -195,7 +195,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
         flex-direction: column;
     }
     .info-card-r{
-        flex-direction: row;
+        flex-direction: row;        
     }
     
     .info-card-l{
@@ -208,6 +208,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
         max-width: 50%;
 
         flex-direction: column;
+        justify-content: space-evenly;
         border-bottom: none;
     }
     .question-section img{
