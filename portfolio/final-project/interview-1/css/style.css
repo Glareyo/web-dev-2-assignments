@@ -17,18 +17,36 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
-	
+    background-color: dimgrey;
 }
 
 
 #container {
-	
+    margin: 3rem 0;
 }
 
+header{
+    width: 100%;
+    padding: 3rem;
+	background-color: slategray;
 
-
-
+}
+header h1{
+    font-size: 3rem;
+    font-weight: 2500;
+}
+header h2{
+    font-size: 1.5rem;
+    font-weight: 5  00;
+}
+footer{
+    background-color: slategrey;
+    padding: 3rem;
+}
+footer p{
+    font-size: 1.25rem;
+    color: black;
+}
 
 
 
@@ -62,6 +80,20 @@ hr {
     padding: 0px;
 }
 
+#introduction{
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 4rem;
+    border: solid black 1rem;
+    background-color: slategray;
+}
+#introduction p{
+    margin: 0 auto;
+    background-color: gainsboro;
+    padding: 2rem;
+    text-align: center;
+}
+
 .question-section{
     margin: 3rem auto;
 
@@ -78,9 +110,17 @@ hr {
 .question-section h3{
     background-color: gainsboro;
     margin: 0;
-    padding: 1rem;
-
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 4rem;
     border-bottom: 0.5rem solid black;
+}
+.question-section .statement{
+    font-style: normal;
+    font-size: 1.5rem;
+
+    line-height: normal;
 }
 .info-card-r figure{
     border-right: 0.5rem solid black;
@@ -130,16 +170,21 @@ hr {
 
     background-color:   slategray;
 }
+.p-container :nth-child(1){
+    text-align: center;
+    padding: 2rem;
+}
 .p-container p{
-    margin: 0;
-    padding: 2rem 1rem;
+    margin: 0 3rem;
+    padding: 0.5rem 2rem;
     font-size: 1rem;
-    text-align: center;    
+    text-align: left;    
     background-color: gainsboro;
 }
-.p-container em{
+.p-container :nth-child(1) em{
     font-size: 4rem;
-    background-color: gainsboro;
+    padding: 0rem 0rem;
+    margin: 0;
 }
 
 
@@ -151,7 +196,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for iPads and tablets.  */
 @media all and (min-width: 481px) {
-	*{background-color: red};
     .question-section{
         flex-direction: column;
     }
@@ -190,7 +234,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-	*{background-color: cyan};
 	.question-section{
         flex-direction: column;
     }
@@ -231,13 +274,20 @@ You can adjust the min-width numbers below, and add as many new media queries as
         max-width: 50%;
         width: 100%;
     }
+    header h1{
+        font-size: 6rem;
+        font-weight: 5000;
+    }
+    header h2{
+        font-size: 2rem;
+        font-weight: 5000;
+    }
 } /* closes 769px+ */
 
 
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-	*{background-color: orange};
 	.question-section figure{
         max-width: 30%;
     }
