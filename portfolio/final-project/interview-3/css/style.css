@@ -1,0 +1,309 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+    background: url(../img/optimo-background.png) repeat fixed center;
+    background-color: darkslategray;
+}
+
+
+#container {
+    margin: 3rem 0;
+}
+
+header{
+    width: 100%;
+    padding: 3rem;
+	background-color: slategray;
+
+}
+header h1{
+    font-size: 3rem;
+    font-weight: 2500;
+}
+header h2{
+    font-size: 1.5rem;
+    font-weight: 5  00;
+}
+footer{
+    background-color: slategrey;
+    padding: 3rem;
+}
+footer p{
+    font-size: 1.25rem;
+    color: black;
+}
+
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+#introduction{
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 4rem;
+    border: solid black 1rem;
+    background-color: slategray;
+}
+#introduction p{
+    margin: 0 auto;
+    background-color: gainsboro;
+    padding: 2rem;
+    text-align: center;
+}
+
+.question-section{
+    margin: 3rem auto;
+
+    max-width: 80%;
+    background-color: blanchedalmond;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    border: solid black 1rem;
+}
+.question-section h3{
+    background-color: gainsboro;
+    margin: 0;
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 4rem;
+    border-bottom: 0.5rem solid black;
+}
+.question-section .statement{
+    font-style: normal;
+    font-size: 1.5rem;
+
+    line-height: normal;
+}
+.info-card-r figure{
+    border-right: 0.5rem solid black;
+    border-bottom: 0.5rem solid black;
+}
+.info-card-l figure{
+    border-bottom: 0.5rem solid black;
+}
+.question-section figure{
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-section img{
+    background-color: gray;
+
+    border-bottom: 0.5rem solid black;
+
+}
+.question-section figcaption{
+    font-size: 1.5rem;
+    text-align: center;
+    
+    padding: 1rem 0rem;
+
+    background-color: darkgray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question-section figcaption p{
+    background-color: darkgray;
+
+}
+.p-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color:   slategray;
+}
+.p-container :nth-child(1){
+    text-align: center;
+    padding: 2rem;
+}
+.p-container p{
+    margin: 0 3rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    text-align: left;    
+    background-color: gainsboro;
+}
+.p-container :nth-child(1) em{
+    font-size: 4rem;
+    padding: 0rem 0rem;
+    margin: 0;
+}
+.p-container :last-child{
+    padding-bottom: 3rem;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for iPads and tablets.  */
+@media all and (min-width: 481px) {
+    .question-section{
+        flex-direction: column;
+    }
+    .info-card-r{
+        display: flex;
+        flex-direction: column;
+    }
+    .info-card-l{
+        display: flex;
+        flex-direction: column;
+    }
+    .question-section figure{
+        max-width: 100%;
+        width: 100%;
+
+        background-color: gray;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .question-section img{
+        max-width: 50%;
+        border: none;
+    }
+    .question-section figcaption{
+        font-size: 1rem;
+        max-width: 50%;
+        padding: 1rem;
+
+        border-left: solid black 0.5rem;
+    }
+	
+} /* closes 481px+ */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	.question-section{
+        flex-direction: column;
+    }
+    .info-card-r{
+        flex-direction: row;        
+    }
+    
+    .info-card-l{
+        flex-direction:row-reverse;
+    }
+    .info-card-l figure{
+        border-left: 0.5rem solid black;
+    }
+    .question-section figure{
+        max-width: 50%;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-bottom: none;
+    }
+    .question-section img{
+        border-bottom: 0.5rem solid black;
+        max-width: 100%;
+        width: 100%;
+    }
+    .question-section figcaption{
+        max-width: 100%;
+        width: 100%;
+
+        font-size: 1rem;
+        text-align: center;
+    
+        padding: 1rem 0rem;
+        font-size: 1.5rem;
+        border: none;
+    }
+    .p-container{
+        max-width: 50%;
+        width: 100%;
+    }
+    header h1{
+        font-size: 6rem;
+        font-weight: 5000;
+    }
+    header h2{
+        font-size: 2rem;
+        font-weight: 5000;
+    }
+} /* closes 769px+ */
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	.question-section figure{
+        max-width: 30%;
+    }
+	.p-container{
+        max-width: 70%;
+        width: 100%;
+    }
+	
+	
+} /* closes 1024px+ */
+
+
+
+
+
