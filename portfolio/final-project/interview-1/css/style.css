@@ -186,6 +186,9 @@ hr {
     padding: 0rem 0rem;
     margin: 0;
 }
+.p-container :last-child{
+    padding-bottom: 3rem;
+}
 
 
 
