@@ -134,11 +134,12 @@ nav img{
 
 
 /* Interviews Section */
-#interview-section h1{
+#interview-section-title{
     font-size: 3rem;
     background-color: darkgray;
     border-bottom: solid gray 2rem;
     max-width: 100%;
+    width: 100%;
     padding: 3rem;
     margin: 0;
     text-align: center;
