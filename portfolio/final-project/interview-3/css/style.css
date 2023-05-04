@@ -27,7 +27,7 @@ body {
 }
 
 header{
-    width: 100%;
+    max-width: 100%;
     padding: 3rem;
 	background-color: slategray;
 
@@ -38,7 +38,7 @@ header h1{
 }
 header h2{
     font-size: 1.5rem;
-    font-weight: 5  00;
+    font-weight: 500;
 }
 footer{
     background-color: slategrey;
