@@ -1,3 +1,8 @@
+/* Credits */
+/* Helped Recieved from W3schools for root and variables */
+/*  - https://www.w3schools.com/css/css3_variables.asp */
+
+
 :root{
     /* Interview Images and Changes */
     --interview-image1: url(../img/temp-img.png);
@@ -21,8 +26,9 @@ html {
     line-height: 1.4em;
 }
 *{
+    scroll-behavior: smooth;
+    scroll-padding: 25%;
 }
-
 
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
@@ -37,9 +43,15 @@ header{
     background-color: darkgray;
 }
 /* Navigation CSS */
+#navigation-div{
+}
 nav{
     position: sticky;
-    top: 1rem;
+    top: 0;
+
+    margin: 0;
+
+    height: 0;
 
     max-width: 10rem;
     width: 100%;
@@ -47,11 +59,14 @@ nav{
     flex-direction: column;
 }
 nav img{
+    position: relative;
     max-width: 50%;
     margin: 0;
 }
 #nav-box{
+    position: relative;
     background-color: slategray;
+    border: solid 0.5rem black;
     
     margin: 0;
     display: flex;
@@ -119,7 +134,15 @@ nav img{
 
 
 /* Interviews Section */
-
+#interview-section h1{
+    font-size: 3rem;
+    background-color: darkgray;
+    border-bottom: solid gray 2rem;
+    width: 100%;
+    padding: 3rem;
+    margin: 0;
+    text-align: center;
+}
 #interview-section{
     background-color: slategray;
 
