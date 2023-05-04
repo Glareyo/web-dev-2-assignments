@@ -1,3 +1,13 @@
+:root{
+    /* Interview Images and Changes */
+    --interview-image1: url(../img/temp-img.png);
+    --interview-image1-change: url(../img/temp-change-img.png);
+    --interview-image2: url(../img/temp-img.png);
+    --interview-image2-change: url(../img/temp-change-img.png);
+    --interview-image3: url(../img/temp-img.png);
+    --interview-image3-change: url(../img/temp-change-img.png);
+}
+
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
 	margin:0px;
@@ -26,11 +36,28 @@ header{
 
     background-color: darkgray;
 }
-/* Parallax Image Border */
-.parallax-border{
+/* Parallax Image CSS */
+.parallax-img{
+    border-top: solid 2rem gray;
+    border-bottom: solid 2rem gray;
+
+    height: 100lvh;
+    max-width: 100%;
     width: 100%;
-    height: 2rem;
-    background-color: gray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#parallax-image-1{
+    background: url(../img/montopoli-background.png) repeat fixed center;
+    background-size: contain;
+}
+#parallax-image-2{
+    background: url(../img/optimo-background.png) repeat fixed center;
+    background-size: contain;
 }
 
 /* Intro section */
@@ -39,7 +66,7 @@ header{
     border: solid 1rem gray;
     max-width: 80%;
 
-    margin: 3rem auto;
+    
     padding: 0.5rem;
 }
 #intro-section p{
@@ -73,12 +100,24 @@ header{
 }
 .interview-figure a{
     border: solid 1rem black;
-    background-color: beige;
     text-decoration: none;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#interview-1-link:hover{--interview-image1: var(--interview-image1-change);}
+#interview-2-link:hover{--interview-image2: var(--interview-image2-change);}
+#interview-3-link:hover{--interview-image3: var(--interview-image3-change);}
+#interview-1-link .interview-image{background-image: var(--interview-image1);}
+#interview-2-link .interview-image{background-image: var(--interview-image2);}
+#interview-3-link .interview-image{background-image: var(--interview-image3);}
+
+.interview-image{
+    width: 100%;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .interview-figure img{
     width: 100%;
@@ -100,7 +139,10 @@ header{
 
 }
 
-
+footer{
+    background-color: lightgray;
+    padding: 2rem 5rem;
+}
 
 
 
