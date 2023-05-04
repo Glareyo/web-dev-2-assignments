@@ -135,11 +135,10 @@ nav img{
 
 /* Interviews Section */
 #interview-section-title{
-    font-size: 3rem;
+    font-size: 2rem;
     background-color: darkgray;
     border-bottom: solid gray 2rem;
     max-width: 100%;
-    width: 100%;
     padding: 3rem;
     margin: 0;
     text-align: center;
@@ -256,7 +255,9 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
 	body{background-color: cyan;}
-	
+    #interview-section-title{
+        font-size: 2rem;
+    }
 	
 	
 } /* closes 769px+ */
