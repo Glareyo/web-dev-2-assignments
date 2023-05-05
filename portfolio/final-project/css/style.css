@@ -5,12 +5,12 @@
 
 :root{
     /* Interview Images and Changes */
-    --interview-image1: url(../img/temp-img.png);
-    --interview-image1-change: url(../img/temp-change-img.png);
-    --interview-image2: url(../img/temp-img.png);
-    --interview-image2-change: url(../img/temp-change-img.png);
-    --interview-image3: url(../img/temp-img.png);
-    --interview-image3-change: url(../img/temp-change-img.png);
+    --interview-image1: url(../img/interview-icon-daniel-george-closed.png);
+    --interview-image1-change: url(../img/interview-icon-daniel-george-open.png);
+    --interview-image2: url(../img/interview-icon-template-closed.png);
+    --interview-image2-change: url(../img/interview-icon-template-open.png);
+    --interview-image3: url(../img/interview-icon-montopoli-closed.png);
+    --interview-image3-change: url(../img/interview-icon-montopoli-open.png);
 }
 
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
@@ -27,7 +27,7 @@ html {
 }
 *{
     scroll-behavior: smooth;
-    scroll-padding: 25%;
+    scroll-padding: 5rem;
 }
 
 
@@ -167,18 +167,20 @@ nav img{
     flex-direction: column;
     align-items: center;
 }
-#interview-1-link:hover{--interview-image1: var(--interview-image1-change);}
-#interview-2-link:hover{--interview-image2: var(--interview-image2-change);}
-#interview-3-link:hover{--interview-image3: var(--interview-image3-change);}
-#interview-1-link .interview-image{background-image: var(--interview-image1);}
-#interview-2-link .interview-image{background-image: var(--interview-image2);}
-#interview-3-link .interview-image{background-image: var(--interview-image3);}
+.interview-figure a:hover p{
+    color: yellow;
+    background-color: black;
+}
+#interview-1-link .interview-image{background-image: var(--interview-image1-change);}
+#interview-2-link .interview-image{background-image: var(--interview-image2-change);}
+#interview-3-link .interview-image{background-image: var(--interview-image3-change);}
 
 .interview-image{
     width: 100%;
     height: 30rem;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .interview-figure p{
     width: 100%;
@@ -259,7 +261,12 @@ You can adjust the min-width numbers below, and add as many new media queries as
     #interview-section-title{
         font-size: 3rem;
     }
-	
+	#interview-1-link:hover{--interview-image1: var(--interview-image1-change);}
+#interview-2-link:hover{--interview-image2: var(--interview-image2-change);}
+#interview-3-link:hover{--interview-image3: var(--interview-image3-change);}
+#interview-1-link .interview-image{background-image: var(--interview-image1);}
+#interview-2-link .interview-image{background-image: var(--interview-image2);}
+#interview-3-link .interview-image{background-image: var(--interview-image3);}
 	
 } /* closes 769px+ */
 
