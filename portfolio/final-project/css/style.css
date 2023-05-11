@@ -7,8 +7,8 @@
     /* Interview Images and Changes */
     --interview-image1: url(../img/interview-icon-daniel-george-closed.png);
     --interview-image1-change: url(../img/interview-icon-daniel-george-open.png);
-    --interview-image2: url(../img/interview-icon-template-closed.png);
-    --interview-image2-change: url(../img/interview-icon-template-open.png);
+    --interview-image2: url(../img/interview-icon-optimo-closed.png);
+    --interview-image2-change: url(../img/interview-icon-optimo-open.png);
     --interview-image3: url(../img/interview-icon-montopoli-closed.png);
     --interview-image3-change: url(../img/interview-icon-montopoli-open.png);
 }
@@ -34,7 +34,11 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-    background-color: white;
+    background-color: slategray;
+}
+#logo-image{
+    margin-top: 5rem;
+    max-width: 80%;
 }
 header{
     display: flex;
@@ -47,7 +51,7 @@ header{
     font-size: 2rem;
 }
 nav{
-    position: sticky;
+    position: fixed;
     top: 0;
 
     margin: 0;
@@ -66,7 +70,7 @@ nav img{
 }
 #nav-box{
     position: relative;
-    background-color: slategray;
+    background-color: gray;
     border: solid 0.5rem black;
     
     margin: 0;
@@ -81,6 +85,7 @@ nav img{
 
     text-decoration: none;
     text-align: center;
+    color: black;
     background-color: gainsboro;
     border: 0.5rem solid darkgray;
 }
@@ -194,7 +199,6 @@ nav img{
 }
 
 #container {
-
 }
 
 footer{
@@ -245,7 +249,10 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for iPads and tablets.  */
 @media all and (min-width: 481px) {
-	body{background-color: red;}
+    #logo-image{
+        margin: 2rem;
+        }
+
 	.interview-figure{
         max-width:25rem;
     }
@@ -257,7 +264,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-	body{background-color: cyan;}
+
+    
     #interview-section-title{
         font-size: 3rem;
     }
@@ -274,7 +282,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-	body{background-color: orange;}
 	#interview-section{
         padding-top: 8rem;
         padding-bottom: 8rem;
