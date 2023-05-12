@@ -2,6 +2,12 @@
 /* Helped Recieved from W3schools for root and variables */
 /*  - https://www.w3schools.com/css/css3_variables.asp */
 
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Pacifico&family=Righteous&display=swap');
+/*
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Righteous', cursive;
+*/
 
 :root{
     /* Interview Images and Changes */
@@ -65,7 +71,7 @@ nav{
 }
 nav img{
     position: relative;
-    max-width: 50%;
+    width: 5rem;
     margin: 0;
 }
 #nav-box{
@@ -132,6 +138,16 @@ nav img{
     text-align: center;
     margin: 0 auto;
 }
+#intro-section h2, #conclusion-section h2{
+    max-width: 80%;
+    text-align: center;
+    margin: 1rem auto;
+
+    font-family: 'Pacifico', cursive;
+}
+#intro-section p{
+
+}
 #intro-section :first-child, #conclusion-section :first-child{
     margin-top: 3rem;
 }
@@ -142,6 +158,8 @@ nav img{
 
 /* Interviews Section */
 #interview-section-title{
+    font-family: 'Alfa Slab One', cursive;
+
     font-size: 2rem;
     background-color: darkgray;
     border-bottom: solid gray 2rem;
@@ -189,6 +207,8 @@ nav img{
     background-position: center;
 }
 .interview-figure p{
+    font-family: 'Righteous', cursive;
+
     width: 100%;
     text-align: center;
     font-size: 2rem;

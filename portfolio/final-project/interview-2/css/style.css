@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Pacifico&family=Righteous&display=swap');
+/*
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Righteous', cursive;
+*/
+
+
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
 	margin:0px;
@@ -88,11 +96,13 @@ header{
 
 }
 header h1{
-    font-size: 3rem;
+    font-family: 'Righteous', cursive;
+    font-size: 1.75rem;
     font-weight: 2500;
 }
 header h2{
-    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 footer{
@@ -164,17 +174,19 @@ hr {
     border: solid black 1rem;
 }
 .question-section h3{
+    font-family: 'Righteous', cursive;
+
     background-color: gainsboro;
     margin: 0;
     padding: 3rem;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bolder;
-    line-height: 4rem;
+    line-height: 2rem;
     border-bottom: 0.5rem solid black;
 }
 .question-section .statement{
     font-style: normal;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     line-height: normal;
 }
@@ -190,8 +202,6 @@ hr {
     max-width: 100%;
     width: 100%;
 
-    
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,7 +211,6 @@ hr {
     background-color: gray;
 
     border-bottom: 0.5rem solid black;
-
 }
 .question-section figcaption{
     font-size: 1.5rem;
@@ -216,8 +225,9 @@ hr {
     justify-content: center;
 }
 .question-section figcaption p{
-    background-color: darkgray;
+    font-family: 'Pacifico', cursive;
 
+    background-color: darkgray;
 }
 .p-container{
     display: flex;
@@ -238,6 +248,8 @@ hr {
     background-color: gainsboro;
 }
 .p-container :nth-child(1) em{
+    font-family: 'Pacifico', cursive;
+
     font-size: 4rem;
     padding: 0rem 0rem;
     margin: 0;
@@ -299,6 +311,13 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
+    .question-section h3{
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+    .question-section .statement{
+        font-size: 1.5rem;
+    }
     #nav-box a{
         margin: 1rem auto;
     }
